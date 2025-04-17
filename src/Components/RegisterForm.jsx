@@ -57,6 +57,7 @@ const RegisterForm = () => {
     console.log(isErrors,"isErrors");
     if(isErrors === false) {
       alert("Registered Successfully");
+      localStorage.setItem("userInfo", JSON.stringify(formValues));
       navigate("/Movies");
     };
   };

@@ -10,6 +10,7 @@ import thriller from "../assets/thriller.png";
 import western from "../assets/western.png";
 import MovieBox from '../Components/MovieBox';
 import MovieChip from '../Components/MovieChip';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -63,6 +64,17 @@ const genres = [
 
 const Movies = () => {
   const [selected,setSelected] = useState([]);
+  const navigate = useNavigate();
+  const handleClick = () =>{
+    if(selected.length < 3){
+      return ;
+    }
+    else {
+      localStorage.setItem("MovieInfo",JSON.stringify(selected));
+      navigate("/Display");
+    }
+
+  }
   console.log(selected);
   return (<>
     <div className="grid grid-col sm:grid-col-2 lg:grid-col-3 gap-5  rounded-lg" style={{gridTemplateColumns: "1fr 1fr 1fr"}}>
@@ -75,9 +87,11 @@ const Movies = () => {
 </div>
 <div className="flex flex-wrap gap-5 mt-10">
 {selected.map((item,index)=>{
-  return <MovieChip key={index} data={item} selected={selected} setSelected={setSelected}/>
+  return <MovieChip key={index} data={item} selected={selected} setSelected={setSelected} />
 })};
 </div>
+{selected.length < 3 ? <p className="text-red-500">Minimum 3 categories required</p> : <> </>}
+<button onClick={handleClick} className="border border-neutral-600 bg-green-500 text-white">Next Page</button>
 </>
 
   )};
