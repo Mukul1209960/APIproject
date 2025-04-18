@@ -2,6 +2,8 @@ import React from 'react';
 import UserInfo from '../Components/UserInfo';
 import profileBig from '../assets/profileBig.png'
 import Notes from '../Components/Notes';
+import Weather from '../Components/Weather';
+import News from '../Components/News';
 
 const Display = () => {
   return (
@@ -10,6 +12,8 @@ const Display = () => {
 
       <UserInfo />
       <Notes />
+      
+      <News />
       
     </div>
   )

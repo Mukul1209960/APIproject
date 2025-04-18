@@ -69,13 +69,13 @@ const RegisterForm = () => {
     <div className="flex flex-col justify-center items-center gap-10 w-full h-full">
       <h1 className="text-4xl font-bold text-yellow-300">Super App</h1>
       <h2 className="text-2xl font-semibold text-yellow-300">Create your Account</h2>
-    <input type="text" placeholder="Name" value={formValues.name} onChange={handleChange} name="name" className="bg-white"/>
+    <input type="text" placeholder="Name" value={formValues.name} onChange={handleChange} name="name" className="bg-yellow-200 text-black"/>
     {errors.name ? <p className="text-red-700">{errors.name}</p> : <></>}
-    <input type="text" placeholder="userName" value={formValues.username} onChange={handleChange} name="username" className="bg-white"/>
+    <input type="text" placeholder="userName" value={formValues.username} onChange={handleChange} name="username" className="bg-yellow-200 text-black"/>
     {errors.username ? <p className="text-red-700">{errors.username}</p> : <></>}
-    <input type="email" placeholder="Email" value={formValues.email} onChange={handleChange} name="email" className="bg-white"/>
+    <input type="email" placeholder="Email" value={formValues.email} onChange={handleChange} name="email" className="bg-yellow-200 text-black"/>
     {errors.email ? <p className="text-red-700">{errors.email}</p> : <></>}
-    <input type="text" placeholder="mobile" value={formValues.mobile} onChange={handleChange}name="mobile" className="bg-white"/>
+    <input type="text" placeholder="mobile" value={formValues.mobile} onChange={handleChange}name="mobile" className="bg-yellow-200 text-black"/>
     {errors.mobile ? <p className="text-red-700">{errors.mobile}</p> : <></>}
     <div className="flex-1">
     <input type="checkbox" id="checkbox" name="checkbox" value={formValues.checkbox} onChange={handleChange} />
