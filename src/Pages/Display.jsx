@@ -12,7 +12,7 @@ const Display = () => {
 
       <UserInfo />
       <Notes />
-      
+      <Weather />
       <News />
       
     </div>
